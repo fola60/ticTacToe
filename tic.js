@@ -43,8 +43,9 @@ function createGame(game){
             return{boardOfGame, createBoard, piece1, piece2, piece3, piece4, piece5, piece6, piece7, piece8, piece9};
     })();
     
-    const gameController = (function (){
-        
+    const gameController = (function (controller){
+        //const start = () =>  {};
+        //const end = () =>  {}};
         const submit = document.getElementById('submitBtn');
         const start = document.querySelector('.start-button');
         const userEntry = document.querySelector('.player-hub');
@@ -53,6 +54,21 @@ function createGame(game){
         function setPiece(p){
             
             TTTGameBoard.createBoard();
+            //testing
+            console.log("Piece set");
+            if (player1.playerTurn == true && TTTGameBoard.boardOfGame[p] == ''){
+                console.log("working");
+                TTTGameBoard.boardOfGame[p] = "x" ;
+                player1.playerTurn = false;
+                player2.playerTurn = true;
+            }else if(player2.playerTurn == true && TTTGameBoard.boardOfGame[p] == ''){
+                console.log("working2");
+                TTTGameBoard.boardOfGame[p] = "o" ;
+                player2.playerTurn = false;
+                player1.playerTurn = true;
+            }
+            TTTGameBoard.createBoard();
+
             console.log("Piece set");
             if (player1.playerTurn == true && TTTGameBoard.boardOfGame[p] == ''){
                 console.log("working");
@@ -105,10 +121,11 @@ function createGame(game){
             }
 
 
+            }
+            
 
             
         return {setPiece,submit,start,userEntry,player1Score,player2Score};
-    };
     })();
 
     function createPlayer(player){
@@ -133,7 +150,7 @@ function createGame(game){
 
 
     return {game, gameBoard, createPlayer, gameController};
-}
+};
 //Stop page reload
 function reload(){
 
