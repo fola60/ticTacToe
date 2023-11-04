@@ -8,7 +8,7 @@
     --border-radius: 8px;
     --container-width: 1200px;
     --shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    
+    --button-color:#33b249;
   }
 html{
     height:100vh;
@@ -53,10 +53,11 @@ html{
   .contents{
     display: flex;
 
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: row;
     width:100%;
     margin-top: 100px;
+    margin-left: 70px;
   }
 
   .game-board{
@@ -68,6 +69,7 @@ html{
     border:25px solid var(--light-green) ;
     border-radius: var(--border-radius);
     background-color: var(--white);
+    
   }
 
   .place{
@@ -100,5 +102,120 @@ html{
 
   }
 
+.create-player{
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width:300px;
+    height: 380px;
+    gap:15px;
+}
+
+  .start-button{
+    font-size: 48px;
+    color:var(--white);
+    background-color: var(--light-green);
+    border-radius: var(--border-radius);
+    border:none;
+  }
+
+  .start-button:hover{
+    filter: brightness(90%);
+    border:solid 4px var(--button-color);
+    color:var(--black);
+  }
+
+  .player-hub{
+    border: 8px solid var(--light-green);
+    background-color: var(--white);
+    padding:15px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: var(--border-radius);
+  }
+
+  .player-hub:hover{
+    border:12px solid var(--black);
+    border-radius: var(--border-radius);
+  }
+
+  .user-form{
+    display: flex;
+    flex-direction: column;
+    gap:35px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .input{
+    padding:5px;
+    height:35px;
+    font-size:16px;
+    border-radius: var(--border-radius);
+
+  }
+
+  .submit-btn{
+    font-size:16px;
+    background-color: var(--grey);
+    border-radius: var(--border-radius);
+    height:35px;
+    padding:10px;
+    border:none;
+    width:100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .submit-btn:hover{
+    border:4px solid var(--black);
+  }
+
+  .submit-btn:active{
+    font-size: 20px;
+  }
+
+  .player-score{
+    width:300px;
+    height:380px;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-right: 15px;
+    border-radius: var(--border-radius);
+    background-color: var(--white);
+  }
+
+  .reset-button{
+    font-size: 1.5rem;
+    border:none;
+    border-radius:var(--border-radius);
+  }
+
+.reset-button:hover{
+    filter: brightness(90%);
+    border:solid 4px var(--button-color);
+    color:var(--black);
+}
+
+  .invisible{
+    visibility: hidden;
+  }
+
+  #visible{
+    visibility: visible;
+  }
+
+  .players{
+    font-size:28px;
+    font-weight: 600;
+
+  }
 
 

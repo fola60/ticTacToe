@@ -16,7 +16,19 @@
         </header>
         <div class="main">
             <div class="contents">
-                <div class="create-player"></div>
+                <div class="create-player">
+                    <div class="start-btn">
+                        <button class="btn start-button">Start Game</button>
+                    </div>
+                    <div class="player-hub invisible" id="playerHub">
+                        <h2>Create your user</h2>
+                        <form class="user-form" id="myForm" action="tic.html" method="post" onsubmit="return reload()">
+                            <input type="text" class="input" id="player1Name" placeholder="Enter player 1 name">
+                            <input type="text" class="input" id="player2Name" placeholder="Enter player 2 name">
+                            <button type="submit" class="btn submit-btn" id="submitBtn">Submit</button>
+                        </form>
+                    </div>
+                </div>
                 <div class="game-board">
                     <div class="place holder1"></div>
                     <div class="place holder2"></div>
@@ -28,7 +40,14 @@
                     <div class="place holder8"></div>
                     <div class="place holder9"></div>
                 </div>
-                <div class="player-score"></div>
+                <div class="player-score">
+                    <h1>ScoreBoard</h1>
+                    <div class="player1-score"></div>
+                    <div class="player2-score"></div>
+                    <div class="reset-btn" id="resetBtn">
+                        <button class="reset-button" id="resetButton">Reset game</button>
+                    </div>
+                </div>
             </div>
         </div>
         <footer class="footer"></footer>
